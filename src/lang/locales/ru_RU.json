@@ -1,0 +1,35 @@
+{
+	"home": "Главная",
+	
+	"sidenav.dashboard": "Основные",
+	"sidenav.dashboard.default": "Дашборд",
+
+	"sidenav.catalog": "Каталог",
+	"sidenav.catalog.productList": "Товары",
+	"sidenav.catalog.productCategories": "Категории",
+	"sidenav.catalog.productCollections": "Коллекции",
+	"sidenav.catalog.productCombos": "Комбо",
+
+	"sidenav.orders": "Заказы",
+
+	"sidenav.clients": "Клиенты",
+	"sidenav.clients.userlist": "Список клиентов",
+	"sidenav.clients.userGroups": "Группы клиентов",
+
+	"sidenav.banners": "Баннеры",
+
+	"sidenav.promo": "Промокоды",
+
+	"sidenav.offline": "Оффлайн точки",
+	"sidenav.offline.addresses": "Адреса",
+	"sidenav.offline.zones": "Геозоны",
+
+	"sidenav.employees": "Сотрудники",
+
+	"sidenav.mailLists": "Рассылки",
+
+	"sidenav.system": "Системные",
+	"sidenav.system.settings": "Настройки",
+	"sidenav.system.mobile": "Мобильное приложение",
+	"sidenav.system.logs": "Логи"
+}

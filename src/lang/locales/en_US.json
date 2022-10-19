@@ -1,0 +1,35 @@
+{
+	"home": "Home",
+	
+	"sidenav.dashboard": "Default",
+	"sidenav.dashboard.default": "Dashboard",
+
+	"sidenav.catalog": "Catalog",
+	"sidenav.catalog.productList": "Products",
+	"sidenav.catalog.productCategories": "Categories",
+	"sidenav.catalog.productCollections": "Collections",
+	"sidenav.catalog.productCombos": "Combo",
+
+	"sidenav.orders": "Orders",
+
+	"sidenav.clients": "Clients",
+	"sidenav.clients.userlist": "Clients List",
+	"sidenav.clients.userGroups": "Clients Groups",
+
+	"sidenav.banners": "Banners",
+
+	"sidenav.promo": "Promos",
+
+	"sidenav.offline": "Offline",
+	"sidenav.offline.addresses": "Addresses",
+	"sidenav.offline.zones": "Geozones",
+
+	"sidenav.employees": "Employees",
+
+	"sidenav.mailLists": "Mail Lists",
+
+	"sidenav.system": "System",
+	"sidenav.system.settings": "Settings",
+	"sidenav.system.mobile": "Mobile App",
+	"sidenav.system.logs": "Logs"
+}
