@@ -12,6 +12,7 @@ import {
   ShopOutlined,
   UsergroupAddOutlined,
   MailOutlined,
+  LayoutOutlined,
 } from '@ant-design/icons';
 import { APP_PREFIX_PATH } from 'configs/AppConfig'
 
@@ -27,6 +28,14 @@ const dashBoardNavTree = [{
       path: `${APP_PREFIX_PATH}/dashboards/default`,
       title: 'sidenav.dashboard.default',
       icon: DashboardOutlined,
+      breadcrumb: false,
+      submenu: []
+    },
+    {
+      key: 'main-planner',
+      path: `${APP_PREFIX_PATH}/planner`,
+      title: 'sidenav.planner',
+      icon: LayoutOutlined,
       breadcrumb: false,
       submenu: []
     },

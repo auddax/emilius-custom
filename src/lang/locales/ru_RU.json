@@ -4,6 +4,8 @@
 	"sidenav.dashboard": "Основные",
 	"sidenav.dashboard.default": "Дашборд",
 
+	"sidenav.planner": "Планировщик",
+
 	"sidenav.catalog": "Каталог",
 	"sidenav.catalog.productList": "Товары",
 	"sidenav.catalog.productCategories": "Категории",

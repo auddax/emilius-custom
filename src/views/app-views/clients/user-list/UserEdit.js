@@ -50,8 +50,6 @@ const SettingContent = (props) => {
 			redirect: 'follow'
 		};
 
-		console.log(raw);
-
 		try {
 			const response = await fetch(`${API_BASE_URL}/users/${userId}`, requestOptions);
 			response.ok && console.log('User info successfully updated!');
