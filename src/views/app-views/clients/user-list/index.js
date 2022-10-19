@@ -39,7 +39,7 @@ const UserList = () => {
 
   const showUserEdit = userId => {
     history.push(
-      'edit-profile', 
+      `edit-profile`, 
       {  user: state.users.filter(item => item.id === userId) }
     );
   }

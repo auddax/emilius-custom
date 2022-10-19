@@ -2,14 +2,14 @@ import { Form, Button, Input, Row, Col, message, } from 'antd';
 import { ROW_GUTTER } from 'constants/ThemeConstant';
 import { useHistory } from "react-router-dom";
 import InnerAppLayout from 'layouts/inner-app-layout';
-import { useState } from 'react';
+import { API_BASE_URL } from 'configs/AppConfig';
 
 const SettingContent = (props) => {
 
   const [ userInfo ] = props.userInfo;
   const history = useHistory();
 
-	const [state, setState] = useState({
+	let state = {
 		name: userInfo.name,
 		email: userInfo.email,
 		userName: userInfo.username,
@@ -18,12 +18,52 @@ const SettingContent = (props) => {
 		address: `${userInfo.address?.street}, ${userInfo.address?.suite}`,
 		city: userInfo.address?.city,
 		postcode: userInfo.address?.zipcode
-	})
+	};
 
-	const onFinish = values => {
+	const updateUser = async (userId) => {
+
+		const myHeaders = new Headers();
+		myHeaders.append("Content-Type", "application/json");
+		myHeaders.append("Accept", "application/json");
+
+		const raw = JSON.stringify({
+			"id": userInfo.id,
+			"name": state.name,
+			"username": state.userName,
+			"email": state.email,
+			"address": {
+				"street": state.address.split(',')[0],
+				"suite": state.address.split(',')[1],
+				"city": state.city,
+				"zipcode": state.postcode,
+				"geo": userInfo.geo,
+			},
+			"phone": state.phoneNumber,
+			"website": state.website,
+			"company": userInfo.company,
+		});
+
+		const requestOptions = {
+			method: 'PUT',
+			headers: myHeaders,
+			body: raw,
+			redirect: 'follow'
+		};
+
+		console.log(raw);
+
+		try {
+			const response = await fetch(`${API_BASE_URL}/users/${userId}`, requestOptions);
+			response.ok && console.log('User info successfully updated!');
+		} catch(error) {
+			console.error(error);
+		}
+	}
+
+	const onFinish = async values => {
 		const key = 'updatable';
 		message.loading({ content: 'Updating...', key });
-    setState({
+    state = {
       name: values.name,
       email: values.email,
       userName: values.userName,
@@ -32,7 +72,10 @@ const SettingContent = (props) => {
       address: values.address,
       city: values.city,
       postcode: values.postcode,
-    })
+    };
+
+		await updateUser(userInfo.id);
+	
 		setTimeout(() => {
 			message.success({ content: 'Done!', key, duration: 2 });
       history.push('user-list');
